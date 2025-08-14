@@ -8,11 +8,21 @@
 
 html{
     font-size: 62.5%;
+    background-color: var(--blanco);
+    box-sizing: border-box;
 }
+
+*, *:before, *:after{
+    box-sizing: inherit;
+} 
+/*Sirve para que el tamaño de los elementos sea el dado y no
+se aumente por el padding o margin, entre otros.*/
 
 body{
     font-size: 16px; /* 1rem=10px*/
     font-family: 'Krub', sans-serif;
+    background-color: var(--blanco);
+    color: var(--oscuro);
 }
 
 .titulo{
@@ -27,3 +37,101 @@ body{
      por lo que conviene usar clases */
     font-size: 2rem;
 }
+h2{
+    font-size: 2.5rem;
+}
+h2 span{
+    font-size: 1.8rem;
+}
+
+.contenedor{
+    max-width: 120rem; /* 1200px */
+    margin: 0 auto; 
+    /* si solo hay 2 valores, el primer valor es el de arriba y abajo y el segundo el de derecha e izquierda respectivamente */
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* en el caso de flex-direction:column (arriba a abajo); justify-content no funciona
+    Eso deja obsoleto a justify teniendo que utilizar align-items: center; para centrar verticalmente*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        align-items: center; /*centra verticalmente*/
+    }
+    
+}
+
+.navegacion-principal a{
+    display : block; /*para que ocupe todo el ancho*/
+    text-align: center; /*centra verticalmente*/
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700; /* negritas*/
+    padding: 1rem; /*sin opción es igual a las 4 direcciones*/
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+@media ( min-width: 768px ){
+    body{
+        background-color: cornflowerblue;
+    }
+    
+}
+
+.hero{
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position:relative
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /*sintaxis antes, se aplica si el nuevo no tiene soporte*/
+    background-color: rgb(0 0 0 0 /70%); /*sintaxis ahora*/
+    width: 100%;
+    height: 100%;
+}
+
+/*
+BEM - Block Element Modifier
+BEM es una metodología para nombrar clases de CSS que ayuda a mantener el código organizado y
+fácil de entender.
+- Block: Representa un componente independiente (ej. .navegacion-principal).
+- Element: Representa una parte del bloque que no puede existir por sí sola (ej. .navegacion-principal__boton).
+pero cuando se utiliza un comportamiento se usa un modifier, por ejemplo cuando se usa un botón activo:
+- Modifier: Representa una variación del bloque o elemento (ej. .navegacion-principal__boton--activo).
+
+Utility First
+Utility First es una metodología de CSS que se centra en crear clases pequeñas y reutilizables
+Si quieres centrar un texto, en lugar de crear una clase específica como .centrar-texto, se utiliza una clase utilitaria como .text-center.
+Esto permite una mayor flexibilidad y reutilización del código, ya que las clases utilitarias
+pueden combinarse para crear estilos más complejos sin necesidad de crear nuevas clases específicas.
+
+Modulos
+Modular CSS es una metodología que divide el CSS en módulos independientes y reutilizables.
+Cada módulo representa un componente o una parte específica de la interfaz de usuario.
+Es el utilizado en este proyecto combinado con Utilidades.
+
+Es posible combinar estas metodologías para aprovechar sus ventajas.
+por ejemplo, Bootstrap usa módulos y utilities.
+*/
