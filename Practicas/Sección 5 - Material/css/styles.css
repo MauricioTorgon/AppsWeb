@@ -12,6 +12,18 @@ html{
     font-size: 62.5%;
     background-color: var(--blanco);
     box-sizing: border-box;
+    scroll-snap-type:y mandatory;
+}
+
+header, h1{
+    margin:0%;
+    padding:0%;
+}
+
+/*Scroll snap*/
+.servicios, .navegacion-principal, .formulario{
+    scroll-snap-align: center; 
+    scroll-snap-stop: always; /*para que se detenga en el centro*/
 }
 
 *, *:before, *:after{
@@ -171,7 +183,9 @@ h2 span{
     align-items: flex-start;
 }
 
+
 /*Servicios*/
+
 .servicios{
     display: grid;
     grid-template-columns: 1fr; 
