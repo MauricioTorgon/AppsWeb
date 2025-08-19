@@ -1,12 +1,12 @@
-:root{
+:root {
     --primario: #9C27B0;
     --primarioOscuro: #89119D;
     --secundario: #ffce00;
-    --secundarioOscuro: #rgb(233,287,2);
+    --secundarioOscuro: #rgb(233, 287, 2);
     --blanco: #ffffff;
     --negro: #000000;
 
-    --fuentePrincipal: 'Staatliches',cursive;
+    --fuentePrincipal: 'Staatliches', cursive;
 }
 
 /*Globales 
@@ -17,60 +17,88 @@ Scroll nap
     *, *:before, *:after{
     box-sizing: inherit;} 
 */
-html{
-        box-sizing:border-box;
-        font-size:62.5% /*para que 1 rem sea igual a 10 px*/
-    }
-    *, *:before, *:after{
-    box-sizing: inherit;}
-
-body{
-    background-color: var(--primario);
-    font-size: 1.6rem;
-    line-height:1.5;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+        /*para que 1 rem sea igual a 10 px*/
 }
 
-p{
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
     font: size 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--blanco);
 }
 
-a{      text-decoration: none;}
-
-img{    max-width:100%;}
-
-.contenedor{
-    max-width: 120rem;
-    margin:0 auto;
+a {
+    text-decoration: none;
 }
 
-h1,h2,h3{
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
     text-align: center;
-    color:var(--secundario);
+    color: var(--secundario);
     font-family: var(--fuentePrincipal);
 }
-h1{     font-size: 4rem;}
-h2{     font-size: 3.2rem;}    
-h3{     font-size: 2.4rem;}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
 
 /*HEADER*/
-.header{ /*Block*/
+.header {
+    /*Block*/
     display: flex;
     justify-content: center;
 }
-.header__logo{ /**Element*/
+
+.header__logo {
+    /**Element*/
     margin: 3rem 0;
     width: 15rem;
     margin-right: 2rem;
 }
 
 /*FOOTER*/
-.footer{ /*Block*/
+.footer {
+    /*Block*/
     background-color: var(--primarioOscuro);
     padding: 1rem 0;
     margin-top: 2rem;
-}.footer__texto{ /*Element*/
+}
+
+.footer__texto {
+    /*Element*/
     text-align: center;
     font-family: var(--fuentePrincipal);
     color: var(--blanco);
@@ -78,14 +106,19 @@ h3{     font-size: 2.4rem;}
 }
 
 /*NAVEGACION*/
-.navegacion{ /*Block*/
+.navegacion {
+    /*Block*/
     font-family: var(--fuentePrincipal);
     background-color: var(--primarioOscuro);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 2rem; /*Nueva forma de separación*/
-}.navegacion__enlace{ /*Element*/
+    gap: 2rem;
+    /*Nueva forma de separación*/
+}
+
+.navegacion__enlace {
+    /*Element*/
     font-family: var(--fuentePrincipal);
     color: var(--blanco);
     font-size: 3rem;
@@ -93,117 +126,171 @@ h3{     font-size: 2.4rem;}
 }
 
 .navegacion__enlace:hover,
-.navegacion_enlace--activo{ /*Modifier*/
+.navegacion_enlace--activo {
+    /*Modifier*/
     color: var(--secundario);
 }
 
 /*GRID*/
-.grid{ /*Block*/
+.grid {
+    /*Block*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; /*Incluye row-gap y column-gap*/
+    gap: 2rem;
+    /*Incluye row-gap y column-gap*/
 }
-@media (min-width: 768px){
-    .grid{
+
+@media (min-width: 768px) {
+    .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 /*Productos*/
-.producto{
- background-color: var(--primarioOscuro);
- padding: 1rem;
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
 }
-.producto__imagen{ /*Element*/
-width: 100%;
-}
-.producto__informacion{ /*Element*/
+
+.producto__informacion {
+    /*Element*/
 
 }
-.producto__nombre{ font-size: 4rem;}
-.producto__precio{
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio {
     font-size: 2.8rem;
     color: var(--secundario);
 }
-.producto__nombre,.producto__precio{ /*Element*/
-font-family: var(--fuentePrincipal);
-margin: 1rem 0;   
-text-align: center;
-line-height: 1.2;
+
+.producto__nombre,
+.producto__precio {
+    /*Element*/
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /*Graficos*/
-.grafico{
+.grafico {
     min-height: 30rem;
     grid-column: 1/3;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.grafico--camisas{ /*Modifier*/
+
+.grafico--camisas {
+    /*Modifier*/
     grid-row: 2/3;
     background-image: url('../img/grafico1.jpg');
 }
 
-.grafico--node{
-        background-image: url('../img/grafico2.jpg');
-        grid-row:8/9;
+.grafico--node {
+    background-image: url('../img/grafico2.jpg');
+    grid-row: 8/9;
 }
-@media (min-width: 768px){
-    .grafico--node{
-    grid-row: 5/6;
-    grid-column: 2/4;
+
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5/6;
+        grid-column: 2/4;
     }
-    
+
 }
 
 /* Nosotros*/
-.nosotros{
-display: grid;
-grid-template-rows: repeat(2,auto);
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
 }
-@media (min-width: 768px){
-    .nosotros{ /*Block*/
+
+@media (min-width: 768px) {
+    .nosotros {
+        /*Block*/
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
     }
 }
 
-.nosotros__imagen{
+.nosotros__imagen {
     grid-row: 1/2;
-    width: 100%;
 }
-@media (min-width: 768px){
-    .nosotros__imagen{
+
+@media (min-width: 768px) {
+    .nosotros__imagen {
         grid-column: 2/3;
-        width: 100%;
     }
-    
+
 }
 
 /*BLOQUES*/
-.bloques{
+.bloques {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     font-family: var(--fuentePrincipal);
 }
-@media (min-width: 768px){
-    .bloques{
+
+@media (min-width: 768px) {
+    .bloques {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
 }
-.bloque{
+
+.bloque {
     font-size: medium;
     text-align: center;
 }
 
-.bloque__imagen{
-    width: 100%;
-}
-.bloque__titulo{
+.bloque__titulo {
     margin: 0;
 }
 
+/*Pagina del producto*/
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.formulario__campo{
+    border-color:var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    /*En una linea-> border: 1rem solid var(--primarioOscuro)*/
+
+    background-color: transparent;
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    font-size: 2rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    grid-column: 1/3;
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
 /*
 BEM Block Element Modifier
 Es una metodologia para crear codigo reutilizable en CSS
