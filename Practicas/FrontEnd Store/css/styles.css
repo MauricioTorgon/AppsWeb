@@ -38,7 +38,7 @@ p{
 
 a{      text-decoration: none;}
 
-img{    width:100%;}
+img{    max-width:100%;}
 
 .contenedor{
     max-width: 120rem;
@@ -53,3 +53,56 @@ h1,h2,h3{
 h1{     font-size: 4rem;}
 h2{     font-size: 3.2rem;}    
 h3{     font-size: 2.4rem;}
+
+/*HEADER*/
+.header{ /*Block*/
+    display: flex;
+    justify-content: center;
+}
+.header__logo{ /**Element*/
+    margin: 3rem 0;
+    width: 15rem;
+    margin-right: 2rem;
+}
+
+/*FOOTER*/
+.footer{ /*Block*/
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}.footer__texto{ /*Element*/
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.2rem;
+}
+
+/*NAVEGACION*/
+.navegacion{ /*Block*/
+    font-family: var(--fuentePrincipal);
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /*Nueva forma de separación*/
+}.navegacion__enlace{ /*Element*/
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.navegacion__enlace:hover,
+.navegacion_enlace--activo{ /*Modifier*/
+    color: var(--secundario);
+}
+
+/*
+BEM Block Element Modifier
+Es una metodologia para crear codigo reutilizable en CSS
+Hay que seguir las convenciones de nombrado para evitar la colison de nombres
+Bloques: Componentes independientes que pueden reutilizarse ".cliente{}"
+Elementos: Partes de un bloque que dependen de el. Utilizan __ despues del nombre del bloque ".cliente__nombre"
+Modificadores: Variaciones de un bloque o elemento que tiene una bandera para indicar que es un modificador. 
+Utilizan -- despues del nombre del bloque o elemento "cliente--premium" o ".cliente__nombre--ceo"
+*/
