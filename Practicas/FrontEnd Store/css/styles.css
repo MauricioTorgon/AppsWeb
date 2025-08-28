@@ -110,9 +110,11 @@ h3 {
     /*Block*/
     font-family: var(--fuentePrincipal);
     background-color: var(--primarioOscuro);
+    color: var(--blanco);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
+    font-size:2rem;
     gap: 2rem;
     /*Nueva forma de separación*/
 }
