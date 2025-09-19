@@ -125,7 +125,7 @@ header .botones .perfil img {
 /* --- Aside ---  */
 aside {
 	height: 100vh;
-	overflow: auto;
+	overflow: auto; /* Scroll vertical */
 	padding-top: 60px;
 }
 
