@@ -1,0 +1,100 @@
+.mobile-wrapper {
+    max-width: 360px;
+    min-height: 740px;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    overflow-x: hidden;
+}
+
+
+.login-header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.promo-banner {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.promo-banner__image {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.promo-banner__legal-text {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 8px;
+    color: #aaa;
+}
+
+.promo-banner__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.login-title {
+    font-size: 1.25rem;
+    font-weight: 700; // O el peso que sea
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    // Estilos para "Correo electrónico", "Contraseña"
+}
+
+.form-control {}
+
+.password-icon {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    /* Layout Properties */
+    text-decoration: none;
+    top: 496px;
+    left: 40px;
+    width: 240px;
+    height: 14px;
+    /* UI Properties */
+    color: var(--primario);
+    text-align: left;
+    font: normal normal bold 14px/24px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #CD0000;
+    opacity: 1;
+}
+
+.login-button {
+    background-color: #D32F2F;
+    border-color: #D32F2F;
+    font-weight: 700;
+    padding: 0.75rem 0;
+}
+
+.login-footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+}
+
+.register-link {
+    a {
+        color: #D32F2F; // Color rojo
+        font-weight: 700;
+    }
+}
