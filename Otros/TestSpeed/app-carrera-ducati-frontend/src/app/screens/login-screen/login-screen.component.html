@@ -25,10 +25,9 @@
 
           <div class="form-group position-relative m-0">
             <input type="password" class="form-control" id="password" placeholder="Contraseña">
-
-            <span class="password-icon">
-              <img src="assets/ver-icon.svg" alt="">
-            </span>
+            <i class="bi bi-eye position-absolute top-50 end-0 translate-middle-y me-3" id="togglePasswordIcon"
+              style="cursor: pointer;">
+            </i>
           </div>
 
           <a href="#" class="forgot-password-link">Recupera tu contraseña</a>
@@ -46,7 +45,7 @@
     <div class="row px-4 border-top pt-4">
       <div class="col-12 login-footer p-0">
         <p class="register-link">
-          ¿Aún no tienes una cuenta? <a href="#">Regístrate</a>
+          ¿Aún no tienes una cuenta? <a routerLink="/registro">Regístrate</a>
         </p>
 
         <p class="m-0"><img src="assets/liston-img.png" alt=""></p>
